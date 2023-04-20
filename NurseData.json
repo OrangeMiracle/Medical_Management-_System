@@ -1,0 +1,20 @@
+{
+    "nurses": [
+      {
+        "username": "nurse1",
+        "userid": "1234567890",
+        "password": "mypassword123"
+      },
+      {
+        "username": "nurse2",
+        "userid": "0987654321",
+        "password": "secretpassword"
+      },
+      {
+        "username": "nurse3",
+        "userid": "2468101214",
+        "password": "password123"
+      }
+    ]
+  }
+  

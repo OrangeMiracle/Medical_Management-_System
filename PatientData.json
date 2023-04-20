@@ -1,0 +1,115 @@
+{
+    "patients": [
+        {
+            "userid": 12345,
+            "username": "johndoe",
+            "password": "p@ssw0rd",
+            "health_data": [
+              {
+                "creation_time": "2022-10-15-09-30-00",
+                "body_temperature_C": 37.2,
+                "heart_rate": 75,
+                "blood_pressure": {
+                  "systolic": 120,
+                  "diastolic": 80
+                },
+                "daily_motivation": "You got this!"
+              },
+              {
+                "creation_time": "2022-10-16-08-45-00",
+                "body_temperature_C": 36.9,
+                "heart_rate": 80,
+                "blood_pressure": {
+                  "systolic": 130,
+                  "diastolic": 85
+                },
+                "daily_motivation": "Keep up the good work!"
+              },
+              {
+                "creation_time": "2022-10-17-10-15-00",
+                "body_temperature_C": 37.1,
+                "heart_rate": 70,
+                "blood_pressure": {
+                  "systolic": 125,
+                  "diastolic": 82
+                },
+                "daily_motivation": "You're doing great!"
+              }
+            ]
+          },
+          {
+            "userid": 67890,
+            "username": "robertsmith",
+            "password": "p@ssword123",
+            "health_data": [
+              {
+                "creation_time": "2023-02-14-08-00-00",
+                "body_temperature_C": 36.8,
+                "heart_rate": 70,
+                "blood_pressure": {
+                  "systolic": 118,
+                  "diastolic": 72
+                },
+                "daily_motivation": "Keep up the good work!"
+              },
+              {
+                "creation_time": "2023-02-15-09-15-00",
+                "body_temperature_C": 37.1,
+                "heart_rate": 80,
+                "blood_pressure": {
+                  "systolic": 128,
+                  "diastolic": 85
+                },
+                "daily_motivation": "You got this!"
+              },
+              {
+                "creation_time": "2023-02-16-10-30-00",
+                "body_temperature_C": 36.7,
+                "heart_rate": 75,
+                "blood_pressure": {
+                  "systolic": 124,
+                  "diastolic": 78
+                },
+                "daily_motivation": "Believe in yourself!"
+              }
+            ]
+          },
+          {
+            "userid": 54321,
+            "username": "jacksmith",
+            "password": "password321",
+            "health_data": [
+              {
+                "creation_time": "2023-01-20-08-30-00",
+                "body_temperature_C": 37.5,
+                "heart_rate": 82,
+                "blood_pressure": {
+                  "systolic": 122,
+                  "diastolic": 78
+                },
+                "daily_motivation": "You can do it!"
+              },
+              {
+                "creation_time": "2023-01-21-09-45-00",
+                "body_temperature_C": 37.0,
+                "heart_rate": 78,
+                "blood_pressure": {
+                  "systolic": 125,
+                  "diastolic": 80
+                },
+                "daily_motivation": "Keep pushing forward!"
+              },
+              {
+                "creation_time": "2023-01-22-10-15-00",
+                "body_temperature_C": 37.2,
+                "heart_rate": 80,
+                "blood_pressure": {
+                  "systolic": 120,
+                  "diastolic": 75
+                },
+                "daily_motivation": "You're doing great!"
+              }
+            ]
+          }                
+    ]
+}
