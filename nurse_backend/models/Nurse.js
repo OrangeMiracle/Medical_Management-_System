@@ -18,22 +18,31 @@ const nurseSchema = buildSchema(`
         password: String!
     }
     type Query {
-        Nurses: [Nurse!]!
-        NurseById(userid: String!): Nurse!
+        nurses: [Nurse]
+        nurseById(userid: String!): Nurse!
     }
     type Mutation {
         addNurse(userid: Int!, username: String!, password: String!): Nurse!
         updateNurse(userid: Int!, username: String!, password: String!): Nurse!
         deleteNurse(userid: Int!): Nurse!
+        authenticateNurse(userid: Int!, password: String!): Nurse
     }
 `);
 
 const nurseResolvers = {
     nurses: async () => {
-        const nurses = await Nurse.find();
-        return nurses;
+        try{
+            const nurses = await Nurse.find();
+            const nursesArray = [];
+            nurses.forEach(function(nurse) {
+                nursesArray.push(nurse);
+            });
+            return nursesArray;
+        }catch(err){
+            console.log(err);
+        }
     },
-    NurseById: async ({userid}) => {
+    nurseById: async ({userid}) => {
         const nurse = await Nurse.findOne(courseCode);
         return nurse;
     },
@@ -48,6 +57,10 @@ const nurseResolvers = {
     },
     deleteNurse: async ({userid}) => {
         const nurse = await Nurse.findOneAndDelete({userid});
+        return nurse;
+    },
+    authenticateNurse: async ({userid, password}) => {
+        const nurse = await Nurse.findOne({userid, password});
         return nurse;
     }
 };
