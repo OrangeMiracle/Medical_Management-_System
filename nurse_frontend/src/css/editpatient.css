@@ -1,5 +1,5 @@
 .editPatientPageDiv .container{
-    width: 50%;
+    width: 60%;
 }
 
 .editPatientPageDiv .BodyTempDiv{
@@ -33,3 +33,8 @@
 .editPatientPageDiv .hideEditdiv{
     display: none;
 }
+
+.tab {
+    text-align: center; 
+    align-items: center; 
+  }

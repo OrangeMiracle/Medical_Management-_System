@@ -131,16 +131,7 @@ const PatientListPage = () => {
                                 ))}
                             </tbody>
                         </table>
-                    </div>
-                    <div className="editPatientView">
-                        <div className="editPatientView-content">
-                            <div className="editPatientViewHeader">
-                                <label>{`Patient ID:    ${patientId}`}</label>
-                                <textarea>{`Patient ID:    ${patientId}`}</textarea>
-                                <label>{`Patient Name:    ${patientName}`}</label>
-                            </div>
-                        </div>
-                    </div>    
+                    </div>  
                 </div>
             ) : (
                 <div className="container">
