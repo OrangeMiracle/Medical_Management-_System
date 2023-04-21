@@ -97,8 +97,13 @@ const EditPaitentPage = () => {
     const editBtnClick = (infoIndex) => {
         console.log('editBtnClick');
         console.log(infoIndex);
-    }
+        window.open(`/addeditdailyhealthdata/${patientid}/${infoIndex}`, '_blank');
 
+    }
+    const addBtnClick = () => {
+        console.log('addBtnClick');
+        window.open(`/addeditdailyhealthdata/${patientid}/-1`, '_blank');
+    }
 
     return (
         <div className='editPatientPageDiv'>
@@ -106,7 +111,7 @@ const EditPaitentPage = () => {
                 <h1>Edit Patient Page</h1>
                 <h3>Patient Name: {patientName}</h3>
                 <h3>Patient ID: {patientid}</h3>
-                <button>Add</button>
+                <button onClick={addBtnClick} >Add</button>
                 <table>
                     <thead>
                         <tr>

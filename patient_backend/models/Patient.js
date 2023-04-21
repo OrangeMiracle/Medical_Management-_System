@@ -45,8 +45,8 @@ const patientSchema = buildSchema(`
         PatientById(userid: Int!): Patient
     }
     type Mutation {
-        addPatient(userid: Int!, username: String!, password: String!, health_data: [HealthDataInput]): Patient!
-        updatePatient(userid: Int!, username: String, password: String!, health_data: [HealthDataInput]): Patient!
+        addPatient(userid: Int!, username: String, password: String, health_data: [HealthDataInput]): Patient
+        updatePatient(userid: Int!, username: String, password: String, health_data: [HealthDataInput]): Patient
         deletePatient(userid: Int!): Patient!
     }
     input HealthDataInput {
