@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import '../css/login.css'
 
 const LoginPage = () => {
     const [userid, setUserid] = useState('');
@@ -37,6 +37,7 @@ const LoginPage = () => {
             if (resData.data && resData.data.authenticateNurse) {
                 console.log('Login successful');
                 window.alert('Login successful');
+                window.location.href = `/patientlist/${userid}/${password}`;
             }
             else{
                 console.log('Login failed');
@@ -46,7 +47,6 @@ const LoginPage = () => {
             console.log(err);
         });
     }
-
     return (
         <div className="container">
         <h1 className="title">Login Page</h1>
@@ -76,5 +76,4 @@ const LoginPage = () => {
       </div>
     );
 };
-
 export default LoginPage;

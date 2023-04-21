@@ -19,7 +19,7 @@ const nurseSchema = buildSchema(`
     }
     type Query {
         nurses: [Nurse]
-        nurseById(userid: String!): Nurse!
+        nurseById(userid: Int!): Nurse
     }
     type Mutation {
         addNurse(userid: Int!, username: String!, password: String!): Nurse!
@@ -43,7 +43,7 @@ const nurseResolvers = {
         }
     },
     nurseById: async ({userid}) => {
-        const nurse = await Nurse.findOne(courseCode);
+        const nurse = await Nurse.findOne({userid});
         return nurse;
     },
     addNurse: async ({userid, username, password}) => {

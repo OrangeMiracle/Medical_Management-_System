@@ -41,8 +41,8 @@ const patientSchema = buildSchema(`
         diastolic: Int!
     }
     type Query {
-        Patients: [Patient!]!
-        PatientById(userid: String!): Patient!
+        Patients: [Patient]
+        PatientById(userid: Int!): Patient
     }
     type Mutation {
         addPatient(userid: Int!, username: String!, password: String!, health_data: [HealthDataInput]): Patient!
@@ -63,12 +63,12 @@ const patientSchema = buildSchema(`
 `);
 
 const patientResolvers = {
-    patients: async () => {
+    Patients: async () => {
         const patients = await Patient.find();
         return patients;
     },
     PatientById: async ({userid}) => {
-        const patient = await Patient.findOne(userid);
+        const patient = await Patient.findOne({userid});
         return patient;
     }, 
     addPatient: async ({userid, username, password, health_data}) => {

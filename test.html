@@ -1,0 +1,66 @@
+<button id="toggle-table-btn" onclick="toggleTable()">Toggle Table</button>
+
+<table id="data-table" style="display:none;">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Temperature (°C)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2022-01-01</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>2022-02-05</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>2022-03-10</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td>2022-04-15</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>2022-05-20</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td>2022-06-25</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>2022-07-30</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <td>2022-08-05</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <td>2022-09-10</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td>2022-10-15</td>
+      <td>22</td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+  function toggleTable() {
+    var table = document.getElementById("data-table");
+    var button = document.getElementById("toggle-table-btn");
+    if (table.style.display === "none") {
+      table.style.display = "table";
+      button.textContent = "Hide Table";
+    } else {
+      table.style.display = "none";
+      button.textContent = "Show Table";
+    }
+  }
+</script>
