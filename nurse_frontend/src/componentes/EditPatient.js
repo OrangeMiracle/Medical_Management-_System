@@ -80,12 +80,12 @@ const EditPaitentPage = () => {
             return (
                 <tr key={index}>
                     {console.log(healthData[index])}
-                    <td>{index}</td>
+                    <td className='tab'>{index}</td>
                     <td>{healthdata.creation_time}</td>
                     <td>{bodyTemperatureBackgroundColor(healthdata.body_temperature_C)}</td>
-                    <td>{healthdata.heart_rate}</td>
-                    <td>{healthdata.blood_pressure.systolic}</td>
-                    <td>{healthdata.blood_pressure.diastolic}</td>
+                    <td className='tab'>{healthdata.heart_rate}</td>
+                    <td className='tab'>{healthdata.blood_pressure.systolic}</td>
+                    <td className='tab'>{healthdata.blood_pressure.diastolic}</td>
                     <td><button onClick={()=>editBtnClick(index)}>Edit</button></td>
                 </tr>
             )
