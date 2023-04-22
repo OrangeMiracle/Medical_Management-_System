@@ -48,6 +48,7 @@ const patientSchema = buildSchema(`
         addPatient(userid: Int!, username: String, password: String, health_data: [HealthDataInput]): Patient
         updatePatient(userid: Int!, username: String, password: String, health_data: [HealthDataInput]): Patient
         deletePatient(userid: Int!): Patient!
+        authenticatePatient(userid: Int!, password: String!): Patient
     }
     input HealthDataInput {
         creation_time: String!
@@ -82,6 +83,10 @@ const patientResolvers = {
     },
     deletePatient: async ({userid}) => {
         const patient = await Patient.findByIdAndDelete({userid});
+        return patient;
+    },
+    authenticatePatient: async ({userid, password}) => {
+        const patient = await Patient.findOne({userid, password});
         return patient;
     }
 };

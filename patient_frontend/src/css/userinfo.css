@@ -1,0 +1,26 @@
+
+.editPatientPageDiv .BodyTempDiv{
+    width: inherit;
+    height: inherit;
+    margin: 0%;
+    top: 0%;
+    font-weight: bolder;
+    color: rgb(21, 21, 21);
+    align-items: center;
+    text-align: center;
+}
+.editPatientPageDiv #normalBodyTempDiv{
+    background-color: rgb(6, 174, 0);
+}
+.editPatientPageDiv #lowBodyTempDiv{
+    background-color: rgb(0, 187, 255);
+}
+.editPatientPageDiv #lowFeverBodyTempDiv{
+    background-color: rgb(255, 255, 0);
+}
+.editPatientPageDiv #midFeverBodyTempDiv{
+    background-color: rgb(255, 174, 0);
+}
+.editPatientPageDiv #highFeverBodyTempDiv{
+    background-color: rgb(255, 0, 0);
+}
