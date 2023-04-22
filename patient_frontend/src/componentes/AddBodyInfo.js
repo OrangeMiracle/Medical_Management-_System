@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import { useParams } from 'react-router-dom'
+import '../css/login.css'
 
 const AddBodyInfoPage = () => {
     const {patientid} = useParams();
@@ -144,9 +145,9 @@ const AddBodyInfoPage = () => {
     }
 
     return (
-        <div>
+        <div className='container'>
             <h1>Add Body Info Page</h1>
-            <p>patientid: {patientid}</p>
+            <h3>patientid: {patientid}</h3>
             <div>
                     <form id="addHealthDataForm" onSubmit={handleformSubmitEvent}>
                         <label for="creation_time">Creation Time:</label>

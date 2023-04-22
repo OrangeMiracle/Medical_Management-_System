@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../css/login.css'
 
 
 const LoginPage = () => {
@@ -51,7 +52,7 @@ const LoginPage = () => {
         <h1 className="title">Login Page</h1>
         <form className="form" onSubmit={onSubmitEventHandler}>
           <div className="form-group">
-            <label className="form-label" htmlFor="student-id">Nurse ID:</label>
+            <label className="form-label" htmlFor="student-id">Patient ID:</label>
             <input
               className="form-input"
               type="text"

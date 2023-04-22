@@ -1,5 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import { useParams } from 'react-router-dom'
+import '../css/login.css'
+import '../css/userinfo.css'
 
 const UserinfoPage = () => {
     const {patientid} = useParams();
@@ -113,12 +115,12 @@ return (
                 <table>
                     <thead>
                         <tr>
-                            <th>Index</th>
-                            <th>Creation Time</th>
-                            <th>Body Temperature</th>
-                            <th>Heart Rate</th>
-                            <th>Blood Pressure(systolic)</th>
-                            <th>Blood Pressure(diastolic)</th>
+                            <th className='tab'>Index</th>
+                            <th className='tab'>Creation Time</th>
+                            <th className='tab'>Body Temperature</th>
+                            <th className='tab'>Heart Rate</th>
+                            <th className='tab'>Blood Pressure(systolic)</th>
+                            <th className='tab'>Blood Pressure(diastolic)</th>
                         </tr>
                     </thead>
                     <tbody>
