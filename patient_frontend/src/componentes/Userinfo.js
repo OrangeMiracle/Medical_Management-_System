@@ -106,6 +106,7 @@ return (
                 <h3>{`User id ${patientid}`}</h3>
                 <h3>{`Daily motivational words:\t ${daily_motivation}`}</h3>
                 <button onClick={addBtnClick} >Add daily body info</button>
+                <button onClick={() => window.open(`https://ringfitadventure.nintendo.com/`, "_blank")}>Fit game</button>
             </div>
             <div className='healthDataDiv'>
                 <h2>Health Data</h2>
